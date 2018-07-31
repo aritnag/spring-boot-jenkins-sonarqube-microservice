@@ -70,13 +70,13 @@ COPY pom.xml /usr/src/app
 # copy other source files (keep in image)
 COPY src /usr/src/app/src
 # package the contents
-#COPY Dockerfile /usr/src/app
+COPY Dockerfile /usr/src/app
 #RUN git clone https://github.com/aritnag/spring-boot-mongo-kubernetes-docker.git
 RUN rm -rf target && mvn -T 1C package
 
 
-#WORKDIR /usr/src/app/target/
-#RUN ls
+WORKDIR /usr/src/app/target/
+RUN ls
 
 #Execute the JAR
 #ARG artifactid
@@ -86,6 +86,6 @@ RUN rm -rf target && mvn -T 1C package
 RUN cp /target/spring-boot-mongo-docker-*.jar  app.jar
 #ENV JAVA_OPTS=""
 ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar app.jar
-#EXPOSE 8000
+EXPOSE 8000
 #ENTRYPOINT ["sh", "-c"]
 CMD ["java -jar app.jar"] 
