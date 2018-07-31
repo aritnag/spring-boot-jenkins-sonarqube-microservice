@@ -83,7 +83,7 @@ RUN ls
 #ARG version
 #ENV artifact ${artifactid}-${version}.jar 
 
-RUN cp /target/spring-boot-mongo-docker-*.jar  app.jar
+RUN cp spring-boot-mongo-docker-*.jar  app.jar
 #ENV JAVA_OPTS=""
 ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar app.jar
 EXPOSE 8000
