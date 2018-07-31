@@ -1,4 +1,3 @@
-#def CONTAINER_NAME="spring-boot-mongo-docker"
 def CONTAINER_NAME="${env.IMAGE}"
 def CONTAINER_TAG="latest"
 def DOCKER_HUB_USER="${env.USER}"
