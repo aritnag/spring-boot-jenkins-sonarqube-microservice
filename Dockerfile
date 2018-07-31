@@ -72,7 +72,7 @@ COPY src /usr/src/app/src
 # package the contents
 #COPY Dockerfile /usr/src/app
 #RUN git clone https://github.com/aritnag/spring-boot-mongo-kubernetes-docker.git
-#RUN rm -rf target && mvn -T 1C package
+RUN rm -rf target && mvn -T 1C package
 
 
 #WORKDIR /usr/src/app/target/
