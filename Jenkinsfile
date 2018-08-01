@@ -1,7 +1,7 @@
-def CONTAINER_NAME="spring-boot-mongo-docker"
+def CONTAINER_NAME="${env.IMAGE}"
 def CONTAINER_TAG="latest"
-def DOCKER_HUB_USER="aritranag20"
-def HTTP_PORT="8000"
+def DOCKER_HUB_USER="${env.USER}"
+def HTTP_PORT="${env.PORT}"
 
 node {
 
