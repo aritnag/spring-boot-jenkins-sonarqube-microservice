@@ -5,7 +5,7 @@
 
 	<groupId>org.davromalc</groupId>
 	<artifactId>spring-boot-mongo-docker</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<packaging>jar</packaging>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
