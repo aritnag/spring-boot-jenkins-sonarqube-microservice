@@ -46,7 +46,7 @@ public class CustomerRestController {
 	
 	@RequestMapping("customer/cn/{country}")
 	public List<Customer> findByCountry(@PathVariable("country") String country){
-		final List<Customer> customer = repository.findByLastName(country);
+		final List<Customer> customer = repository.findByCountry(country);
 		LOGGER.info("Fetching customers from database {}" , customer);
 		return customer;
 	}
