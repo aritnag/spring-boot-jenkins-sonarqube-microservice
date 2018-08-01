@@ -56,6 +56,7 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 # speed up Maven JVM a bit
 ENV MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"
 ENTRYPOINT ["/usr/bin/mvn"]
+VOLUME /root/.m2
 # ----
 # Install GIT
 RUN apk update && apk upgrade && \
